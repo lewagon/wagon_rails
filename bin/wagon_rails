@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require 'pathname'
+
+source_path = (Pathname.new(__FILE__).dirname + '../lib').expand_path
+$LOAD_PATH << source_path
+
+require 'wagon_rails'
+
+if ARGV.first == 'new'
+  ARGV.shift
+end
+
+templates_root = File.expand_path(File.join("..", "templates"), File.dirname(__FILE__))
+WagonRails::AppGenerator.source_root templates_root
+WagonRails::AppGenerator.source_paths << Rails::Generators::AppGenerator.source_root << templates_root
+
+WagonRails::AppGenerator.start
