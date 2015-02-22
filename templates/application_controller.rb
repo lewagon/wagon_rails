@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user!, unless: :pages_controller?
 
   include Pundit
-  protect_from_forgery
   after_action :verify_authorized, except: :index, unless: :devise_or_pages_controller?
   after_action :verify_policy_scoped, only: :index, unless: :devise_or_pages_controller?
 
@@ -13,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def user_not_authorized
     flash[:error] = I18n.t('controllers.application.user_not_authorized', default: "You can't access this page.")
-    redirect_to(tracks_path)
+    redirect_to(root_path)
   end
 
   def devise_or_pages_controller?
