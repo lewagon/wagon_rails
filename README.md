@@ -28,7 +28,7 @@ If you don't want to create a GitHub repo, use the `--skip-github` flag, and
 if you don't want to create an Heroku app, use the `--skip-heroku` flag.
 
 ```bash
-$ wagon_rails bew YOUR_PROJECT_NAME --skip-github --skip-heroku
+$ wagon_rails new YOUR_PROJECT_NAME --skip-github --skip-heroku
 ```
 
 ## Dependencies
