@@ -35,11 +35,16 @@ This gem suppose that you have **Postgresql** on your computer. Check out
 
 For the GitHub repo creation, it assumes you have the [hub](https://github.com/github/hub) gem installed.
 
-And for the Heroku repo creation, it assumes that you have the `heroku binary` and are logged in (`heroku login`).
-
 
 ```bash
 $ gem install hub
+```
+
+And for the Heroku repo creation, it assumes that you have the `heroku binary` and are logged in (`heroku login`).
+
+```bash
+$ brew install heroku
+$ heroku login
 ```
 
 ## Gemfile
@@ -51,7 +56,6 @@ generated projectname/Gemfile.
 It includes application gems like:
 
 - [Postgres](https://github.com/ged/ruby-pg) for access to the Postgres database
-
 - [Figaro](https://github.com/laserlemon/figaro) for environment variables and configuration management.
 - [Simple Form](https://github.com/plataformatec/simple_form) for form markup and style
 - [High Voltage](https://github.com/thoughtbot/high_voltage) for static pages
@@ -63,8 +67,7 @@ It includes application gems like:
 
 And development gems like:
 
-- [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring
-  objects
+- [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
 - [Pry ByeBug](https://github.com/deivid-rodriguez/pry-byebug) for interactively debugging behavior
 - [Better Errors](https://github.com/charliesome/better_errors) for a great error page with remote debugging
 - [Letter Opener](https://github.com/ryanb/letter_opener) for testing emails in `development`.
