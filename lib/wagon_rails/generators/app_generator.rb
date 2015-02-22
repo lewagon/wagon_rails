@@ -43,9 +43,9 @@ module WagonRails
       invoke :setup_auth
       invoke :setup_database
       invoke :create_github_repo
+      invoke :create_heroku_app
       invoke :first_commit
       invoke :first_push
-      invoke :create_heroku_app
       invoke :outro
     end
 
@@ -136,6 +136,7 @@ module WagonRails
         build :set_heroku_remote
         build :provide_deploy_script
         build :add_host_to_application_yml
+        build :push_env_to_heroku
         build :commit, "Add heroku deploy script"
       end
     end

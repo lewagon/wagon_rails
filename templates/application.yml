@@ -1,6 +1,7 @@
 # This file is not versioned by git, so not shared on GitHub
 # If you add something here, inform your colleagues over a **secure** channel.
 
-S3_BUCKET_NAME: "TODO"
-AWS_ACCESS_KEY_ID: "TODO"
-AWS_SECRET_ACCESS_KEY: "TODO"
+# Uncomment these 3 lines to use Paperclip and AWS to store file uploads
+# S3_BUCKET_NAME: "TODO"
+# AWS_ACCESS_KEY_ID: "TODO"
+# AWS_SECRET_ACCESS_KEY: "TODO"

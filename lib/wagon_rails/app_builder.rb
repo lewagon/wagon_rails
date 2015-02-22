@@ -208,6 +208,8 @@ module WagonRails
 production:
   HOST: https://<%= #{heroku_app_name} %>.herokuapp.com
       EOF
+
+      append_file "config/application.yml", host
     end
 
     def push_env_to_heroku
