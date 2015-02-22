@@ -15,6 +15,7 @@ $ gem install wagon_rails
 Then run:
 
 ```bash
+$ cd ~/code/YOUR_GITHUB_NICKNAME
 $ wagon_rails new YOUR_PROJECT_NAME
 ```
 
