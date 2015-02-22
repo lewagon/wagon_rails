@@ -6,7 +6,7 @@ module WagonRails
     class_option :database, type: :string, aliases: "-d", default: "postgresql",
       desc: "Configure for selected database (options: #{DATABASES.join("/")})"
 
-    class_option :heroku, type: :boolean, default: false,
+    class_option :skip_heroku, type: :boolean, default: false,
       desc: "Create production Heroku app"
 
     class_option :skip_github, type: :boolean, default: false,
@@ -112,7 +112,7 @@ module WagonRails
     end
 
     def setup_git
-      if !options[:skip_git]
+      unless options[:skip_git]
         say 'Initializing git'
         invoke :setup_gitignore
         invoke :init_git
@@ -129,7 +129,7 @@ module WagonRails
     end
 
     def create_heroku_app
-      if options[:heroku]
+      unless options[:skip_heroku]
         say "Creating Heroku app"
         build :create_heroku_app
         build :set_heroku_remote
@@ -179,7 +179,7 @@ module WagonRails
 
     def outro
       say "Congratulations! You're ready to rock!"
-      if options[:heroku]
+      unless options[:skip_heroku]
         say 'Once in the rails folder, you can deploy to Heroku with:'
         say '  $ bin/deploy'
       end
