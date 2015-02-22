@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/wagon_rails.svg)](http://badge.fury.io/rb/wagon_rails)
 
-Wagon Rails is the base Rails application used by [Le Wagon](http://www.lewagon.org/en)'s students during the 9-week FullStack bootcamp. It's the scripted version of [lewagon/rails-kickoff](http://github.com/lewagon/rails-kickoff) where you would manually copy/paste commands to achieve the same result as justone.
+Wagon Rails is the base Rails application used by [Le Wagon](http://www.lewagon.org/en)'s students during the 9-week FullStack bootcamp. It's the scripted version of [lewagon/rails-kickoff](http://github.com/lewagon/rails-kickoff) where you would manually copy/paste commands to achieve the same result with just one command line.
 
 ## Installation
 
