@@ -29,6 +29,7 @@ project without losing one day to set up everything.
 
   s.add_dependency 'bundler', '~> 1.3'
   s.add_dependency 'rails', WagonRails::RAILS_VERSION
+  s.add_dependency 'colorize', '~> 0.7'
 
   # s.add_development_dependency 'rspec', '~> 2.0'
   # s.add_development_dependency 'capybara', '~> 2.2', '>= 2.2.0'

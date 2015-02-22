@@ -1,3 +1,4 @@
+require 'colorize'
 require 'rails/generators'
 require 'rails/generators/rails/app/app_generator'
 
@@ -43,6 +44,7 @@ module WagonRails
       invoke :setup_database
       invoke :create_github_repo
       invoke :first_commit
+      invoke :first_push
       invoke :create_heroku_app
       invoke :outro
     end
@@ -96,7 +98,6 @@ module WagonRails
       build :fix_i18n_deprecation_warning
       build :configure_puma
       build :setup_foreman
-      build :setup_figaro
       build :setup_paperclip
       build :copy_application_yml
     end
@@ -177,12 +178,15 @@ module WagonRails
       build :commit, "New rails app generated with lewagon/wagon-rails gem"
     end
 
+    def first_push
+      build :first_push
+    end
+
     def outro
-      say "Congratulations! You're ready to rock!"
-      unless options[:skip_heroku]
-        say 'Once in the rails folder, you can deploy to Heroku with:'
-        say '  $ bin/deploy'
-      end
+      say ""
+      say "----> Open config/initializers/devise.rb and update the `mailer_sender`"
+      say ""
+      say "Congratulations! You're ready to rock!".colorize(:green)
     end
 
     protected

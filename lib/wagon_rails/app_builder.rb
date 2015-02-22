@@ -152,10 +152,6 @@ module WagonRails
       copy_file 'Procfile', 'Procfile'
     end
 
-    def setup_figaro
-      run 'touch config/application.yml'
-    end
-
     def copy_application_yml
       copy_file 'application.yml', 'config/application.yml'
     end
@@ -301,6 +297,10 @@ production:
     def setup_application_controller
       remove_file 'app/controllers/application_controller.rb'
       copy_file 'application_controller.rb', 'app/controllers/application_controller.rb'
+    end
+
+    def first_push
+      run "git push -u origin master"
     end
 
     private
