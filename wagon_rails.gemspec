@@ -18,7 +18,7 @@ project without losing one day to set up everything.
   s.executables = ['wagon_rails']
   s.extra_rdoc_files = %w[README.md LICENSE]
   s.files = `git ls-files`.split("\n")
-  s.homepage = 'http://github.com/lewagon/wagon_rails'
+  s.homepage = 'https://github.com/lewagon/wagon_rails'
   s.license = 'MIT'
   s.name = 'wagon_rails'
   s.rdoc_options = ['--charset=UTF-8']

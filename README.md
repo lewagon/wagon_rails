@@ -40,7 +40,7 @@ For the GitHub repo creation, it assumes you have the [hub](https://github.com/g
 $ gem install hub
 ```
 
-And for the Heroku repo creation, it assumes that you have the `heroku binary` and are logged in (`heroku login`).
+And for the Heroku app creation, it assumes that you have the `heroku binary` and are logged in (`heroku login`).
 
 ```bash
 $ brew install heroku
