@@ -206,7 +206,7 @@ module WagonRails
     def add_host_to_application_yml
       host = <<-EOF
 production:
-  HOST: https://<%= #{heroku_app_name} %>.herokuapp.com
+  HOST: https://#{heroku_app_name}.herokuapp.com
       EOF
 
       append_file "config/application.yml", host
