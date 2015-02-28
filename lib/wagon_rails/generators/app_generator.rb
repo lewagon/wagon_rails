@@ -177,7 +177,7 @@ module WagonRails
     end
 
     def first_commit
-      build :commit, "New rails app generated with lewagon/wagon-rails gem"
+      build :commit, "New rails app generated with lewagon/wagon_rails gem"
     end
 
     def first_push
