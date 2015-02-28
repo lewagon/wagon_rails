@@ -181,7 +181,9 @@ module WagonRails
     end
 
     def first_push
-      build :first_push
+      unless options[:skip_github]
+        build :first_push
+      end
     end
 
     def outro
