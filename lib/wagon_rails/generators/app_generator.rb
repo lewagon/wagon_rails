@@ -91,6 +91,7 @@ module WagonRails
 
     def configure_app
       say 'Configuring app'
+      build :enable_embed_authenticity_token_in_remote_forms
       build :configure_action_mailer
       build :configure_rack_timeout
       build :configure_simple_form

@@ -31,6 +31,14 @@ module WagonRails
       inject_into_class "config/application.rb", "Application", config
     end
 
+    def enable_embed_authenticity_token_in_remote_forms
+      config = <<-RUBY
+    config.embed_authenticity_token_in_remote_forms = true
+      RUBY
+
+      inject_into_class "config/application.rb", "Application", config
+    end
+
     def configure_generators
       config = <<-RUBY
 
