@@ -169,10 +169,9 @@ module WagonRails
     end
 
     def setup_stylesheets
-      remove_file 'app/assets/stylesheets/application.css'
-      run 'rm -r app/assets/stylesheets'
-      run 'curl -L https://github.com/lewagon/rails-stylesheets/archive/master.zip > stylesheets.zip'
-      run 'unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets'
+      run 'rm -rf app/assets/stylesheets'
+      run 'curl -L https://github.com/lewagon/rails-stylesheets/archive/master.zip > app/assets/stylesheets.zip'
+      run 'cd app/assets &&  unzip stylesheets.zip && rm stylesheets.zip && mv rails-stylesheets-master stylesheets & cd ../..'
     end
 
     def setup_javascripts
@@ -287,8 +286,12 @@ production:
       generate 'devise User'
     end
 
-    def generate_pundit
-      generate 'pundit:install'
+    # def generate_pundit
+    #   generate 'pundit:install'
+    # end
+
+    def generate_annotate
+      generate 'annotate:install'
     end
 
     def install_navbar

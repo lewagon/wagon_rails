@@ -63,7 +63,6 @@ It includes application gems like:
 - [Simple Form](https://github.com/plataformatec/simple_form) for form markup and style
 - [High Voltage](https://github.com/thoughtbot/high_voltage) for static pages
 - [Devise](https://github.com/plataformatec/devise) for user authentication
-- [Pundit](https://github.com/elabs/pundit) for user authorization
 - [Paperclip](https://github.com/thoughtbot/paperclip) for file attachment and S3 upload.
 - [Bootstrap](https://github.com/twbs/bootstrap-sass) to jump start the design with a solid responsive grid and basic UI components.
 - [Font Awesome](https://github.com/FortAwesome/font-awesome-sass) to get a nice iconography
@@ -85,6 +84,16 @@ add a `deploy` script to the `bin` repository. Simply deploy with:
 
 ```
 $ deploy  # git push heroku + rake db:migrate + restart
+```
+
+## Option
+
+You can enable [Pundit](https://github.com/elabs/pundit) for user authorization, open
+the Gemfile, uncomment the `pundit` gem. Then:
+
+```bash
+$ bundle install
+$ rails g pundit:install
 ```
 
 ## Credits

@@ -101,6 +101,7 @@ module WagonRails
       build :setup_foreman
       build :setup_paperclip
       build :copy_application_yml
+      build :generate_annotate
     end
 
     def setup_stylesheets
@@ -126,7 +127,7 @@ module WagonRails
       build :generate_user
       build :install_navbar
       build :generate_devise_views
-      build :generate_pundit
+      # build :generate_pundit
       build :setup_application_controller
     end
 
