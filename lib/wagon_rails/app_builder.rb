@@ -295,7 +295,7 @@ production:
     end
 
     def install_navbar
-      run 'curl https://raw.githubusercontent.com/lewagon/awesome-navbars/master/templates/_navbar_with_login.html.erb > app/views/shared/_navbar.html.erb'
+      run 'curl https://raw.githubusercontent.com/lewagon/awesome-navbars/master/templates/_navbar_wagon.html.erb > app/views/shared/_navbar.html.erb'
       run 'curl http://lorempixel.com/200/50/abstract/ > app/assets/images/logo.jpg'
     end
 
